@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2016",
     "jsx": "preserve",
-    "module": "ESNext",
+    "module": "CommonJS",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

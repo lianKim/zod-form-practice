@@ -1,32 +1,31 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import path from "path";
-import webpack from "webpack";
-const __dirname = path.resolve();
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
 
-export default {
-  mode: "development",
-  entry: "./src/index.tsx",
+module.exports = {
+  mode: 'development',
+  entry: './src/index.tsx',
   output: {
-    path: path.join(__dirname, "/dist"),
-    filename: "bundle.js",
+    path: path.join(__dirname, '/dist'),
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: ["babel-loader", "ts-loader"],
+        use: ['babel-loader', 'ts-loader'],
       },
     ],
   },
   plugins: [
     new webpack.ProvidePlugin({
-      React: "react",
+      React: 'react',
     }),
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: './index.html',
     }),
     // for webpack-dev-server
     new webpack.HotModuleReplacementPlugin(),
