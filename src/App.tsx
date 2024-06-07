@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
-import GlobalStyle from '~styles/GlobalStyle';
+import GlobalStyles from '~styles/GlobalStyles';
 
 export default function App() {
   return (
     <Suspense fallback={<div>loading...</div>}>
-      <GlobalStyle />
+      <GlobalStyles />
     </Suspense>
   );
 }

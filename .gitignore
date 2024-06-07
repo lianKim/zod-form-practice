@@ -1,5 +1,6 @@
 node_modules
 dist
+storybook-static
 
 # Logs
 logs
@@ -20,3 +21,4 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+*storybook.log

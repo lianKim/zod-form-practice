@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   ${reset}
 
   :root {
@@ -119,4 +119,4 @@ h3 {
 }
 `;
 
-export default GlobalStyle;
+export default GlobalStyles;
