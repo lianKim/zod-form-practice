@@ -18,7 +18,10 @@ const GlobalStyles = createGlobalStyle`
   --color-gray-900: #171e36;
   --color-white: #f5f5f5;
   --color-black: #111111;
-  --color-red: #f21724;
+  --color-orange: #EC5838;
+  --color-green: #3F8E41;
+  --color-negative: var(--color-orange);
+  --color-positive: var(--color-green);
   /* Font Size */
   --font-base: 10px;
   --font-2xs: 1rem;
