@@ -11,12 +11,23 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+      '~components': path.resolve(__dirname, 'src/components'),
+      '~pages': path.resolve(__dirname, 'src/pages'),
+      '~assets': path.resolve(__dirname, 'src/assets'),
+      '~styles': path.resolve(__dirname, 'src/lib/styles'),
+      '~utils': path.resolve(__dirname, 'src/lib/utils'),
+    },
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: ['babel-loader', 'ts-loader'],
+      },
+      {
+        test: /\.svg$/i,
+        use: ['@svgr/webpack'],
       },
     ],
   },
