@@ -19,6 +19,7 @@ export default function Input({
 }: InputProps) {
   return (
     <TextInput
+      id={name}
       name={name}
       placeholder={placeholder}
       {...(register && register(name))}
