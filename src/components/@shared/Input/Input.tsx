@@ -5,6 +5,9 @@ interface InputProps {
   name: string;
   placeholder?: string;
   isError?: boolean;
+  /**
+   * react-hook-form의 register
+   */
   register?: UseFormRegister<FieldValues>;
 }
 
@@ -34,8 +37,12 @@ const TextInput = styled.input<StyledTextInputProps>`
   padding-left: var(--space-sm);
   border: 1px solid;
   border-color: ${(props) =>
-    props.isError ? 'var(--color-red)' : 'var(--color-gray-300)'};
+    props.isError === true ? 'var(--color-negative)' : 'var(--color-gray-300)'};
   border-radius: var(--radius-xs);
+
+  &::placeholder {
+    color: var(--color-gray-500);
+  }
 
   &:focus {
     outline: none;
